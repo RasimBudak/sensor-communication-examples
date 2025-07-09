@@ -47,3 +47,31 @@ Bu örnek, Arduino ve GPS modülü NEO-6M arasında UART üzerinden haberleşmey
 1. `uart_gps_read.ino` dosyasını Arduino IDE'de açın.  
 2. Arduino'nuza yükleyin.  
 3. Seri monitörde GPS modülünden gelen NMEA verilerini göreceksiniz.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# SPI Sensör Okuma - MCP3008 ADC
+
+Bu örnek, Arduino ve MCP3008 ADC modülü arasında SPI protokolü ile analog veri okuma işlemini göstermektedir.
+
+## Gereksinimler
+- Arduino UNO veya uyumlu kart
+- MCP3008 ADC modülü
+- SPI kütüphanesi (Arduino IDE ile birlikte gelir)
+
+## Bağlantılar
+| MCP3008 Pin | Arduino Pin |
+|-------------|-------------|
+| VDD         | 5V          |
+| VREF        | 5V          |
+| AGND        | GND         |
+| DGND        | GND         |
+| CLK         | 13          |
+| DOUT        | 12 (MISO)   |
+| DIN         | 11 (MOSI)   |
+| CS/SHDN     | 10          |
+
+## Kullanım
+1. `spi_mcp3008_read.ino` dosyasını Arduino IDE'de açın.  
+2. Arduino'nuza yükleyin.  
+3. Seri monitörde ADC kanal 0’dan gelen analog değeri göreceksiniz.
+
